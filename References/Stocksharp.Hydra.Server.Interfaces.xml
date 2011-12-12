@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StockSharp.Hydra.Server.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:StockSharp.Hydra.Server.Interfaces.IHydraServer">
+            <summary>
+            Интерфейс серверной части Hydra.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Server.Interfaces.IHydraServer.Login(System.String,System.String)">
+            <summary>
+            Получить сессию.
+            </summary>
+            <param name="user">Пользователь.</param>
+            <param name="pass">Пароль.</param>
+            <returns>Идентификатор сессии.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Server.Interfaces.IHydraServer.GetSecurityIds(System.Guid)">
+            <summary>
+            Получить все идентификаторы инструментов.
+            </summary>
+            <param name="sessionId">Идентификатор сессии.</param>
+            <returns>Идентификаторы инструментов.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Server.Interfaces.IHydraServer.GetSecurities(System.Guid,System.String[])">
+            <summary>
+            Получить инструмент по идентификатору.
+            </summary>
+            <param name="sessionId">Идентификатор сессии.</param>
+            <param name="securityId">Идентификаторы инструментов.</param>
+            <returns>Инструмент.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Server.Interfaces.IHydraServer.GetSecuritiesDataZip(System.Guid,System.String[],System.DateTime)">
+            <summary>
+            Получить архив с историческими маркет-данными.
+            </summary>
+            <param name="sessionId">Идентификатор сессии.</param>
+            <param name="securityId">Идентификаторы инструментов..</param>
+            <param name="date">Дата, для которое необходимо получить маркет-данные.</param>
+            <returns>Маркет-данные.</returns>
+        </member>
+    </members>
+</doc>
